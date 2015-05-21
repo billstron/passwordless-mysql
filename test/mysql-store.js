@@ -1,8 +1,8 @@
 var standardTests = require('passwordless-tokenstore-test');
-
+var mysql = require("mysql");
 
 var MySQLStore = require("../");
-var connUrl = "mysql://test:test@localhost/passwordless-test";
+var connUrl = "mysql://test@localhost/test";
 
 function TokenStoreFactory() {
   return new MySQLStore(connUrl);
@@ -10,7 +10,13 @@ function TokenStoreFactory() {
 
 var beforeEachTest = function(done) {
   // clean database before usage
-  done();
+  var con = mysql.createConnection(connUrl);
+  con.query("delete from passwordless", function(err, rows){
+    if(err){
+      console.log("err:", err);
+    }
+    done();
+  });
 }
 
 var afterEachTest = function(done) {
@@ -21,7 +27,7 @@ var afterEachTest = function(done) {
 // Call the test suite
 standardTests(TokenStoreFactory, beforeEachTest, afterEachTest);
 
-describe('Your specific tests', function() {
+describe("MySQLStore", function() {
 
   beforeEach(function(done) {
     beforeEachTest(done);
@@ -30,8 +36,5 @@ describe('Your specific tests', function() {
   afterEach(function(done) {
     afterEachTest(done);
   });
-
-  it('should...', function () {
-    expect(...).to...
-  });
+  
 });
