@@ -10,7 +10,7 @@ Tokens are stored in a MongoDB database and are hashed and salted using
 First, install the module:
 
 ```bash
-$ npm install passwordless-mongostore --save
+$ npm install passwordless-mysql --save
 ```
 
 Afterwards, follow the guide for Passwordless. A typical implementation may look like this:
@@ -32,7 +32,7 @@ app.use(passwordless.acceptToken());
 ```
 ## Initialization
 ```javascript
-new MongoStore(uri, [options]);
+new MySQLStore(uri, [options]);
 ```
 - uri: (string) MySQL URI as further described in the MySQL docs.  
 - [options]: (object) Optional. 
