@@ -49,12 +49,12 @@ passwordless.init(new MySQLStore(connStr, {
 ```
 
 ### Options
-Current there are no options supported. 
+Currently there are no options supported. 
 
 ## Acknowledgement
 Thanks to [Battochon](https://github.com/Battochon) for the 
 [passwordless-postgrestore](https://github.com/Battochon/passwordless-postgrestore)
-library for which this was largely cribbed from.  
+library for which this was largely cribbed.  
 
 ## License
 Copyright (c) 2015, William J. Burke
