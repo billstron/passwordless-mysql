@@ -1,10 +1,10 @@
 # passwordless-mysql
 This module provides token storage for Passwordless, a node.js module for express that allows website
-authentication without password using verification through email or other means. 
+authentication without password using verification through email or other means.
 Visit the project's website https://passwordless.net for more details.
 
-Tokens are stored in a MongoDB database and are hashed and salted using 
-[bcrypt](https://github.com/ncb000gt/node.bcrypt.js/). 
+Tokens are stored in a MYSQL database and are hashed and salted using 
+[bcrypt](https://github.com/ncb000gt/node.bcrypt.js/).
 
 ## Usage
 First, install the module:
@@ -35,7 +35,7 @@ app.use(passwordless.acceptToken());
 new MySQLStore(uri, [options]);
 ```
 - uri: (string) MySQL URI as further described in the MySQL docs.  
-- [options]: (object) Optional. 
+- [options]: (object) Optional.
 
 Example:
 
@@ -49,10 +49,10 @@ passwordless.init(new MySQLStore(connStr, {
 ```
 
 ### Options
-Currently there are no options supported. 
+Currently there are no options supported.
 
 ## Acknowledgement
-Thanks to [Battochon](https://github.com/Battochon) for the 
+Thanks to [Battochon](https://github.com/Battochon) for the
 [passwordless-postgrestore](https://github.com/Battochon/passwordless-postgrestore)
 library for which this was largely cribbed.  
 

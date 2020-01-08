@@ -36,5 +36,5 @@ describe("MySQLStore", function() {
   afterEach(function(done) {
     afterEachTest(done);
   });
-  
+
 });
