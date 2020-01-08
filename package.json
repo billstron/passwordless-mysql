@@ -27,7 +27,7 @@
     "passwordless-tokenstore-test": "^0.1.1"
   },
   "dependencies": {
-    "bcrypt": "^0.8.3",
+    "bcrypt": "^3.0.6",
     "mysql": "^2.6.2",
     "passwordless-tokenstore": "0.0.10",
     "util": "^0.10.3"
